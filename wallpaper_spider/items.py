@@ -4,7 +4,6 @@ import scrapy
 
 
 class WallpaperSpiderItem(scrapy.Item):
-    name = scrapy.Field()
     id = scrapy.Field()
     url = scrapy.Field()
     title = scrapy.Field()
