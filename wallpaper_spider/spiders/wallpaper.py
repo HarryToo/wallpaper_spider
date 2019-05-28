@@ -37,4 +37,5 @@ class WallpaperSpider(scrapy.Spider):
         item['classify'] = response.meta['classify']
         description = response.css('.content-desc::text').get()
         item['time'] = re.search(r'\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}', description).group()
-        print('\n*******************\n', item, '\n*******************\n')
+        yield item
+        # print('\n*******************\n', item, '\n*******************\n')
